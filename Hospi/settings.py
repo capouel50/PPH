@@ -71,7 +71,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Hospi.urls'
 
-FRONTEND_DOMAIN = 'https://pph-mgfa.vercel.app/'
+FRONTEND_DOMAIN = 'https://pph-frontend.vercel.app/'
 
 TEMPLATES = [
     {
@@ -95,14 +95,14 @@ WSGI_APPLICATION = 'Hospi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
-DATABASES = {'default': dj_database_url.config(default=config('DATABASE_URL'))}
+# DATABASES = {'default': dj_database_url.config(default=config('DATABASE_URL'))}
 
 
 
@@ -256,5 +256,5 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
 ]
 CORS_ALLOWED_ORIGINS = [
-    'https://pph-front.vercel.app/', "http://localhost:8080",
+    'https://pph-frontend.vercel.app', "http://localhost:8080",
 ]
